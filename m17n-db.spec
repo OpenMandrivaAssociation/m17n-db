@@ -9,7 +9,6 @@ Group:     System/Internationalization
 License:   LGPL
 URL:       http://www.m17n.org/m17n-lib/index.html
 Source0:   http://www.m17n.org/m17n-lib-download/%{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:   glibc-i18ndata gettext-devel
 
 %description

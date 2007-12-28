@@ -1,4 +1,4 @@
-%define version	1.4.0
+%define version	1.5.0
 %define release	%mkrel 1
 
 Name:      m17n-db
@@ -6,9 +6,9 @@ Summary:   The m17n database
 Version:   %{version}
 Release:   %{release}
 Group:     System/Internationalization
-License:   LGPL
+License:   LGPLv2+
 URL:       http://www.m17n.org/m17n-lib/index.html
-Source0:   http://www.m17n.org/m17n-lib-download/%{name}-%{version}.tar.bz2
+Source0:   http://www.m17n.org/m17n-lib-download/%{name}-%{version}.tar.gz
 BuildRequires:   glibc-i18ndata gettext-devel
 
 %description
@@ -28,10 +28,6 @@ Headers of %{name} for development.
 %setup -q
 
 %build
-[[ -f configure ]] || ./bootstrap.sh || :
-aclocal
-autoconf
-automake -a
 %configure2_5x
 %make
 
@@ -39,6 +35,8 @@ automake -a
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
+mkdir -p %buildroot%_libdir
+mv %buildroot%_datadir/pkgconfig %buildroot%_libdir/pkgconfig
 %find_lang %{name}
 
 %clean
@@ -47,11 +45,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc AUTHORS COPYING README
+%doc AUTHORS README NEWS ChangeLog
 %{_bindir}/*
-%{_datadir}/m17n/*
+%{_datadir}/m17n
 
 %files devel
 %defattr(-,root,root)
-%doc COPYING
 %{_libdir}/pkgconfig/*

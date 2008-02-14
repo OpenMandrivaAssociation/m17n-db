@@ -6,6 +6,7 @@ Summary:   The m17n database
 Version:   %{version}
 Release:   %{release}
 Group:     System/Internationalization
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:   LGPLv2+
 URL:       http://www.m17n.org/m17n-lib/index.html
 Source0:   http://www.m17n.org/m17n-lib-download/%{name}-%{version}.tar.gz

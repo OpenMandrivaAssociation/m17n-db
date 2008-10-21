@@ -1,6 +1,6 @@
 Name:      m17n-db
 Summary:   The m17n database
-Version:   1.5.2
+Version:   1.5.3
 Release:   %mkrel 1
 Group:     System/Internationalization
 License:   LGPLv2+
@@ -21,8 +21,7 @@ Requires:   %{name} = %{version}
 Headers of %{name} for development.
 
 %prep
-
-%setup -q
+%setup -q -n %name-%version
 
 %build
 %configure2_5x

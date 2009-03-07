@@ -1,12 +1,13 @@
 Name:      m17n-db
 Summary:   The m17n database
-Version:   1.5.3
+Version:   1.5.4
 Release:   %mkrel 1
 Group:     System/Internationalization
 License:   LGPLv2+
 URL:       http://www.m17n.org/m17n-lib/index.html
 Source0:   http://www.m17n.org/m17n-lib-download/%{name}-%{version}.tar.gz
 BuildRequires:   glibc-i18ndata gettext-devel
+BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -24,7 +25,7 @@ Headers of %{name} for development.
 %setup -q -n %name-%version
 
 %build
-%configure2_5x
+%configure2_5x --build=%{_host}
 %make
 
 %install
@@ -32,8 +33,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %makeinstall_std
 
-mkdir -p %buildroot%_libdir
-mv %buildroot%_datadir/pkgconfig %buildroot%_libdir/pkgconfig
 %find_lang %{name}
 
 %clean
@@ -47,4 +46,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(-,root,root)
-%{_libdir}/pkgconfig/*
+%{_datadir}/pkgconfig/*

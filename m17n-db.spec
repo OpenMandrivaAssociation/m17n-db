@@ -1,6 +1,6 @@
 Name:      m17n-db
 Summary:   The m17n database
-Version:   1.5.4
+Version:   1.5.5
 Release:   %mkrel 1
 Group:     System/Internationalization
 License:   LGPLv2+

@@ -1,11 +1,11 @@
 Name:      m17n-db
 Summary:   The m17n database
-Version:   1.6.1
-Release:   %mkrel 1
+Version:   1.6.2
+Release:   %mkrel -c RC 1
 Group:     System/Internationalization
 License:   LGPLv2+
 URL:       http://www.m17n.org/m17n-lib/index.html
-Source0:   http://www.m17n.org/m17n-lib-download/%{name}-%{version}.tar.gz
+Source0:   http://www.m17n.org/m17n-lib-download/%{name}-%{version}RC.tar.gz
 BuildRequires:   glibc-i18ndata gettext-devel
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -22,7 +22,7 @@ Requires:   %{name} = %{version}
 Headers of %{name} for development.
 
 %prep
-%setup -q -n %name-%version
+%setup -q -n %{name}-%{version}RC
 
 %build
 %configure2_5x --build=%{_host}

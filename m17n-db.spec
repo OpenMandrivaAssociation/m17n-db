@@ -1,7 +1,7 @@
 Summary:	The m17n database
 Name:		m17n-db
 Version:	1.8.0
-Release:	1
+Release:	2
 Group:		System/Internationalization
 License:	LGPLv2+
 Url:		http://www.m17n.org/m17n-lib/index.html
@@ -26,10 +26,10 @@ Headers of %{name} for development.
 
 %build
 %configure --build=%{_host}
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make-install
 
 %find_lang %{name}
 

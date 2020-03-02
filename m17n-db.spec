@@ -29,7 +29,7 @@ Headers of %{name} for development.
 %make_build
 
 %install
-%make-install
+%make_install
 
 %find_lang %{name}
 

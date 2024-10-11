@@ -1,6 +1,6 @@
 Summary:	The m17n database
 Name:		m17n-db
-Version:	1.8.7
+Version:	1.8.8
 Release:	1
 Group:		System/Internationalization
 License:	LGPLv2+

@@ -4,7 +4,7 @@ Version:	1.8.8
 Release:	1
 Group:		System/Internationalization
 License:	LGPLv2+
-Url:		http://www.m17n.org/m17n-lib/index.html
+Url:		https://www.m17n.org/m17n-lib/index.html
 Source0:	http://savannah.c3sl.ufpr.br//m17n/m17n-db-%version.tar.gz
 BuildArch:	noarch
 BuildRequires:	glibc-i18ndata

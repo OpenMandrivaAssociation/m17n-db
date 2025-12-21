@@ -7,6 +7,11 @@ License:	LGPLv2+
 Url:		https://www.m17n.org/m17n-lib/index.html
 Source0:	http://savannah.c3sl.ufpr.br//m17n/m17n-db-%version.tar.gz
 BuildArch:	noarch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	glibc-i18ndata
 BuildRequires:	gettext-devel
 
